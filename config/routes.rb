@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   
   get '/' => 'home#index'
   
-  resource :contacts, only: [:new, :create]
+  # get 'contacts' => 'contacts#new' # простой вариант вывода страницы с get
+  resource :contacts, only: [:new, :create], path_names: {:new => ''} #другой способ вывода get
   resources :articles
  
   # The priority is based upon order of creation: first created -> highest priority.
