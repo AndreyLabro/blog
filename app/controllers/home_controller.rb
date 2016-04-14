@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
-  def index
+  def contacts
   end
+  
+
 end
