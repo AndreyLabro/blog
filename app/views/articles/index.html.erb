@@ -4,4 +4,5 @@
   <h3><%= link_to article.title, article_path(article) %></h3>
   <p><%= article.text %></p>
   <span><%= link_to 'Edit', edit_article_path(article) %></span>
+  <span><%= link_to "Delete", article, method: :delete, data: { confirm: "You sure?" } %></span>
 <% end %>
