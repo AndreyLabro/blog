@@ -13,7 +13,8 @@ class ArticlesController < ApplicationController
   
   def destroy
     Article.find(params[:id]).destroy
-    redirect_to :back
+    #redirect_to :back #just go back
+    redirect_to articles_path # Alternative with redirect to articles list
   end
   
   def update
