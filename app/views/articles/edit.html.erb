@@ -1,0 +1,17 @@
+<h2>Edit article</h2>
+
+<%= form_for :article, url: article_path(@article), method: :put do |f| %>
+
+  <p>
+    <%= f.label :title, ("Enter title:") %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :text, ("Article content:") %><br>
+    <%= f.text_area :text %>
+  </p>
+  <p>
+    <%= f.submit("Yarrr!") %>
+  </p>
+  
+<% end %>
