@@ -7,10 +7,14 @@ Rails.application.routes.draw do
   
   # get 'contacts' => 'contacts#new' # простой вариант вывода страницы с get
   resource :contacts, only: [:new, :create], path_names: {:new => ''} #другой способ вывода get
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
   
   get 'terms' => 'pages#terms'
   get 'about' => 'pages#about'
+  
+  
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
