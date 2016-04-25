@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'home/contacts'
 
   get 'home/index'
   
   get '/' => 'home#index'
+  
+  root to: "home#index"
   
   # get 'contacts' => 'contacts#new' # простой вариант вывода страницы с get
   resource :contacts, only: [:new, :create], path_names: {:new => ''} #другой способ вывода get
