@@ -7,9 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<ul>
+  <% if user_signed_in? %>
+  <li>Welcome, <%= current_user.email %></li>
+  <li><%= link_to 'Signout', destroy_user_session_path, method: :delete %></li>
+  <% else %>
+  <li><%= link_to 'Sign in', new_user_session_path %></li>
+  <% end %>
   
-<%= link_to 'Sign in', new_user_session_path %>
-<%= link_to 'Signout', destroy_user_session_path, method: :delete %>
+</ul>
   
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
