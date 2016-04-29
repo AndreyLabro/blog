@@ -1,17 +1,21 @@
+<div class="col-md-6">
+
 <h2>Edit article</h2>
 
-<%= form_for :article, url: article_path(@article), method: :put do |f| %>
+<%= form_for :article, url: article_path(@article), method: :put, :html => {:class => 'form'} do |f| %>
 
   <p>
     <%= f.label :title, ("Enter title:") %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => 'form-control' %>
   </p>
   <p>
     <%= f.label :text, ("Article content:") %><br>
-    <%= f.text_area :text %>
+    <%= f.text_area :text, :class => 'form-control' %>
   </p>
   <p>
     <%= f.submit("Yarrr!") %>
   </p>
   
 <% end %>
+
+</div>

@@ -19,3 +19,9 @@
   background-color: #f00 !important;
   opacity: 0.2
 }
+
+textarea {
+  resize: none;
+  width: 100%;
+  min-height: 280px;
+}
