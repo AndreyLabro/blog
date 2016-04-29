@@ -1,7 +1,7 @@
 <h2><%= @article.title %></h2>
 
 <p>
-  <%= @article.text %>
+  <%= simple_format(@article.text) %>
 </p>
 
 <h3>Comments</h3>
