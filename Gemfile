@@ -50,7 +50,11 @@ gem 'devise'
 group :test, :development do
   gem 'rspec-rails', '~> 3.4'
   gem 'capybara'
-  gem 'shoulda-matchers'
 end
+
+group :test do
+  gem 'shoulda-matchers', require: false
+end
+
 
 
